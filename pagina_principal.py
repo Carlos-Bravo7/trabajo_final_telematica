@@ -31,7 +31,7 @@ app.layout = html.Div([
 def displayClick(btn1, btn2, btn3, nombre, puerto, contraseña):
     msg = "None of the buttons have been clicked yet"
     if "btn-nclicks-1" == ctx.triggered_id:
-        comando = 'docker run -d -p'+puerto+':80 --name '+nombre+ ' trabajo_final python3.10 pagina_usuarios.py carlos'
+        comando = 'docker run -d -p'+puerto+':80 --name '+nombre+ ' trabajo_final python3.10 perfil.py carlos'
         os.system(comando)
         msg = "el contenedor se ha creado"
         
