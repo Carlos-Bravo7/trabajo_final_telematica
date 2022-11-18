@@ -6,6 +6,8 @@ RUN pip3.10 install flask
 RUN pip3.10 install dash
 RUN pip3.10 install pandas
 COPY pagina_principal.py /home/Escritorio/trabajo_final/pagina_principal.py
+COPY perfil.py /home/Escritorio/trabajo_final/perfil.py
+COPY bd.csv /home/Escritorio/trabajo_final/bd.csv
 WORKDIR /home/Escritorio/trabajo_final/
 EXPOSE 80
 CMD python3.10 pagina_principal.py
