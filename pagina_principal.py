@@ -50,9 +50,8 @@ def displayClick(btn1, btn2, btn3, nombre, puerto, contraseña):
         msg = "ha borrado su cuenta exitosamente"
         
         a = pd.read_csv('bd.csv')
-        borrar = a['usuario'] == nombre
-        segundo = a[borrar]
-        segundo.head()
+        borr = len(a)
+        a.drop(borr - 1)
         
     return html.Div(msg)
 
